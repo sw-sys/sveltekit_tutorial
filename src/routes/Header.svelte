@@ -17,11 +17,28 @@
         // and replace them using the corresponding value from the replacements object
         return str.replace(/[elaso]/g, (char) => replacements[char] || char);
     };
+
+    let message = "Hello, world!";
 </script>
 
-<!-- Display the original name -->
+<!-- Display the original name  -->
 <h1>Hello {name}</h1>
 
 <!-- Display the transformed name using the transformName function -->
 133tised:
 <h2>{transformName(name)}</h2>
+  
+  <div class="example">
+    {message}
+  </div>
+  
+  <style lang="postcss">
+    .example {
+      display: flex;
+      background: linear-gradient(45deg, #f06, transparent);
+      &::after {
+        content: " (Styled with PostCSS)";
+      }
+    }
+  </style>
+  

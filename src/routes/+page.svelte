@@ -10,7 +10,7 @@
     const updateStatus = () => {
         const now = new Date();
         const hours = now.getUTCHours(); // get current hour in GMT
-        status = hours >= 9 && hours < 17 ? "OPEN" : "CLOSED";
+        status = hours >= 9 && hours < 16 ? "OPEN" : "CLOSED";
     }
     // logic to automatically update store opening status based on time
     onMount(() => {
@@ -20,14 +20,24 @@
         return () => clearInterval(interval); // clean component on unmount
     })
 
+    // // Status button toggle
+    // function onclick() {
+    //     status = status === "OPEN" ? 'CLOSED' : 'OPEN';
+    // }
+
 </script>
 
-
 <h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<p class="text-green-400">Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
 <Header {name} />
 
-First name: <input type= "text" bind:value={name} />
+<p>First name: <input type= "text" bind:value={name} /></p>
 
-<p> the store is now {status}</p>
+<p>The store is now {status}</p>
+
+<!-- <button onclick={onclick}>Toggle Opening Status</button> -->
+<!-- OR function below -->
+<button onclick={() => {
+    status = status === "OPEN" ? 'CLOSED' : 'OPEN';
+}}>Toggle Opening Status</button>
