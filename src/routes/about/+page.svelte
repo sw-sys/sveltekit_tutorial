@@ -1,6 +1,13 @@
 <script>
-    
+    import Header from '$lib/components/Header.svelte';
+    import Main from '$lib/components/Main.svelte';
+    import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<h1>Welcome to About</h1>
-<p class="text-green-400">Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<Header />
+<Main />
+<Footer />
+
+<body>
+    <h1>About me</h1>
+</body>
