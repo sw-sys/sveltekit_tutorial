@@ -10,7 +10,7 @@
     const updateStatus = () => {
         const now = new Date();
         const hours = now.getUTCHours(); // get current hour in GMT
-        status = hours >= 9 && hours < 16 ? "OPEN" : "CLOSED";
+        status = hours >= 9 && hours < 17 ? "OPEN" : "CLOSED";
     }
     // logic to automatically update store opening status based on time
     onMount(() => {
