@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import Header from '$lib/components/Header.svelte';
     import Main from '$lib/components/Main.svelte';
     import Footer from '$lib/components/Footer.svelte';
@@ -6,7 +6,7 @@
 
 <Header />
 <Main />
-<Footer />
+<Footer /> -->
 
 <body>
     <h1>Home Page</h1>
